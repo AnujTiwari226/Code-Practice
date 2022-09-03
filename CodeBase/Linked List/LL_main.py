@@ -1,0 +1,18 @@
+import LL as li
+if __name__ == '__main__':
+    llist = li.LL(10)
+    llist.insert_first(30)
+    llist.insert_first(40)
+    llist.insert_first(50)
+    llist.insert_first(60)
+    llist.display()
+    llist.insert_at_middle(30, 20)
+    llist.display()
+    llist.insert_in_the_end(5)
+    llist.display()
+    print(llist.delete_first())
+    llist.display()
+    print(llist.delete_from_last())
+    llist.display()
+    print(llist.delete_from_middle(0))
+    llist.display()
