@@ -3,12 +3,12 @@ from functools import wraps
 
 import pandas as pd
 
-def logger_method(func):
-    @wraps(func)
+def logger_method(ui):
+    @wraps(ui)
     def wrapper(*args, **kwargs):
-        print(f"\n-------------- !!!!!!!      Executing  {func.__name__} method       !!!!!!!-------------- \n")
+        print(f"\n-------------- !!!!!!!      Executing  {ui.__name__} method       !!!!!!!-------------- \n")
 
-        return func(*args, **kwargs)
+        return ui(*args, **kwargs)
     return wrapper
 
 
@@ -24,6 +24,7 @@ class PandasPrac:
         }
         df = pd.DataFrame(data)
         print(df.drop_duplicates(subset='email'))
+        print(self.DupsInDataframe.__name__)
 
     @staticmethod
     @logger_method
@@ -136,8 +137,8 @@ class PandasPrac:
 
 
 prac = PandasPrac()
-# prac.DupsInDataframe()
-# PandasPrac.rename_cols()
+prac.DupsInDataframe()
+PandasPrac.rename_cols()
 # PandasPrac.dropMissingData()
 # PandasPrac.createBonusColumn()
 # PandasPrac.fillMissingValues()

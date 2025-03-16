@@ -208,6 +208,17 @@ class Solution:
         df = pd.melt(products, id_vars='product_id', var_name='store', value_name='price').dropna()
         return df
 
+    def get_student_name(self):
+        students_data = {
+            'id': [1, 2, 3, 4, 5],
+            'name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+            'subject': ['Math', 'Science', 'History', 'Math', 'Science'],
+            'marks': [85, 92, 78, 90, 88]
+        }
+        df = pd.DataFrame(students_data)
+        name = df.loc[df['id']==2, 'name'].values[0]
+        return name
+
 if __name__ == '__main__':
     sol = Solution()
     # sol.big_countries()
@@ -224,4 +235,6 @@ if __name__ == '__main__':
     # sol.order_scores()
     # print('different approach')
     # print(sol.order_scores_2())
-    print(sol.rearrange_products_table())
+    # print(sol.rearrange_products_table())
+
+    print(sol.get_student_name())

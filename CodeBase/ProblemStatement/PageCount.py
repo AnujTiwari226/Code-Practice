@@ -17,7 +17,8 @@ class Solution:
 if __name__ == "__main__":
     """
     In this Drawing Book problem you have Given n and p, 
-    find and print the minimum number of pages that must be turned in in order to arrive at page p.
+    find and print the minimum number of pages that must be turned in in 
+    order to arrive at page p.
     
     """
     print("Enter no of pages 1st and then target page : ")
