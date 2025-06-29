@@ -83,7 +83,6 @@ sol = Solution()
 nums = [2, 7, 11, 15]
 # print(sol.twoSum(nums, 9))
 prices = [7, 1, 5, 3, 6, 4]
-# print(sol.maxProfit(prices))
 nums1 = [1, 2, 3, 0, 0, 0]
 m = 3
 nums2 = [2, 5, 6]

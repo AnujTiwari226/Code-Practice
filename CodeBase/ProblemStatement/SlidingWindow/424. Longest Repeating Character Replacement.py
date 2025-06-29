@@ -16,5 +16,6 @@ class Solution:
         return maxl
 
 if __name__ == '__main__':
+
     sol = Solution()
     print(sol.characterReplacement(s = "AABABBA", k = 1))
